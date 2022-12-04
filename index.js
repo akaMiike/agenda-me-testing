@@ -65,7 +65,7 @@ app.get('/auth', async (req, res) => {
 })
 
 app.post('/auth', async (req, res) => {
-  if (req.body.email == 'admin@admin.com' && req.body.password == 'admin') {
+  if (req.body.email == "admin@admin.com" && req.body.password == "admin") {
     req.session.logged = true
     res.redirect('/');
   } else {
@@ -188,6 +188,8 @@ setInterval(async () => {
 }, 1000 * 60 * 5) // 1s * 60s => 1 min * 5 => 5 min
 
 
-app.listen(3333, () => {
+let server = app.listen(3333, () => {
   console.log('Server is running');
 })
+
+module.exports = server

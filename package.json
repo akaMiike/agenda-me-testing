@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --runInBand "
   },
   "author": "",
   "license": "ISC",
@@ -19,5 +19,9 @@
     "mongoose": "^5.13.5",
     "nodemailer": "^6.6.3",
     "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "supertest": "^6.3.2"
   }
 }
